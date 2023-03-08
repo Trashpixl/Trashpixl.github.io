@@ -1,9 +1,14 @@
 body {
     background-color: rgb(0, 0, 0);
   }
+  logo {
+    
+  }
   h1 {
     color: rgb(255, 255, 255);
-    font-size: 36px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 46px;
+    transform: translate(5%, 5%);
   }
   h2 {
     color: rgb(255, 255, 255);
@@ -28,13 +33,6 @@ body {
  
   
   /* Top left text */
-  .title {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 46px;
-  }
   
   /* Centered text */
   .centered {
