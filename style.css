@@ -3,14 +3,44 @@ body {
   }
   h1 {
     color: rgb(255, 255, 255);
+    font-size: 36px;
   }
   h2 {
+    color: rgb(255, 255, 255);
+  }
+  p1 {
     color: rgb(255, 255, 255);
   }
   .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 35%;
     border-radius: 15%;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+ 
+  
+  /* Top left text */
+  .title {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 46px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
   }
