@@ -1,21 +1,8 @@
 body {
     background-color: rgb(0, 0, 0);
   }
-  logo {
-    
-  }
-  h1 {
-    color: rgb(255, 255, 255);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 46px;
-    transform: translate(5%, 5%);
-  }
-  h2 {
-    color: rgb(255, 255, 255);
-  }
-  p1 {
-    color: rgb(255, 255, 255);
-  }
+  
+ 
   .center {
     display: block;
     margin-left: auto;
@@ -24,21 +11,18 @@ body {
     border-radius: 15%;
   }
   .container {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
-  /* Bottom left text */
- 
   
-  /* Top left text */
-  
-  /* Centered text */
   .centered {
+    
     position: absolute;
     top: 10%;
-    left: 40%;
+    left: 15%;
     transform: translate(-50%, -50%);
-    font-size: 28px;
+    font-size: 25px;
   }
