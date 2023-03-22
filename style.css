@@ -33,7 +33,7 @@ body {
   .centered2 {
     position: absolute;
     top: 15%;
-    left: 20%;
+    left: 30%;
     transform: translate(-65%, -65%);
     font-size: 20px;
   }
