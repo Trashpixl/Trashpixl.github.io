@@ -10,15 +10,42 @@
         </span>
     </head>
     <body>
-        <div class="container">
-            <img src="png/WebsiteBackground.jpg" alt="background" style="width:100%;filter: blur(0px);-webkit-filter: blur(0px);">
-            
-            <div class="centered">Welcome to Trashpixl!<br>An awesome up to date<br> anarchy and minigame server.<br>Ip: Trashpixl.ddns.net:2577</div>
-            
-        </div>
-        <div class="container2"> 
-            <img src="png/random.jpg" alt="backgroundModpack" style="width: 100%;">
-        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'Modpack')">Modpack</button>
+            <button class="tablinks" onclick="openCity(event, 'Discord')">Discord</button>
+          </div>
+          <div id="Home" class="tabcontent">
+            <div class="container">
+                <img src="png/WebsiteBackground.jpg" alt="background" style="width:100%;filter: blur(0px);-webkit-filter: blur(0px);">
+                <div class="centered">Welcome to Trashpixl!<br>An awesome up to date<br> anarchy and minigame server.<br>Ip: Trashpixl.ddns.net:2577</div>
+            </div>
+          </div>
+          <div id="Modpack" class="tabcontent">
+            <div class="container2"> 
+                <img src="png/random.jpg" alt="backgroundModpack" style="width: 100%;">
+            </div>
+          </div>
+          <div id="Discord" class="tabcontent">
+            <h3>Discord</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+          
+          <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            </script>
     </body>
    
 </html>
