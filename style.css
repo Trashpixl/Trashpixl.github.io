@@ -30,6 +30,13 @@ body {
     text-align: center;
     color: rgb(0, 0, 0);
   }
+  .centered2 {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-65%, -65%);
+    font-size: 20px;
+  }
   .container2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
