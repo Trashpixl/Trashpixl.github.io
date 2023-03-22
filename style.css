@@ -31,10 +31,10 @@ body {
     color: rgb(0, 0, 0);
   }
   .centered2 {
-    position: absolte;
+    position: absolute;
     top: 15%;
     left: 20%;
-    transform: translate(-85%, -65%);
+    transform: translate(-85%, -85%);
     font-size: 20px;
   }
   .container2 {
