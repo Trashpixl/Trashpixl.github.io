@@ -58,6 +58,6 @@ body {
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
   border-top: none;
 }
