@@ -1,6 +1,6 @@
 # Trashpixl-Website
 
-This site is not meant to be accessed. It is a template for the site on the Arduino.
+This is the direct deployment of the site.
 
 # How to Help with Development
 
