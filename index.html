@@ -30,6 +30,7 @@
             <button class="tablinks" onclick="openTab(event, 'Modpack')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: large;">Modpack</button>
             <button class="tablinks" onclick="openTab(event, 'Discord')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Discord</button>
             <button class="tablinks" onclick="openTab(event, 'Donate')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Donate</button>
+            <button class="tablinks" onclick="openTab(event, 'Contrib')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Contribute</button>
           </div>
           <div id="Home" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
             <div class="container" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
@@ -63,9 +64,16 @@
               <a href="https://google.com" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 155px;font-size: 20px;">Donate Now!</a>
           </div>
           </div>
+          <div id="Contrib" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+            <div class="container" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);"> 
+              <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px;"><br>Since Trashpixl is a fully open source server<br>you to can contribute to the developement of the server!</div>
+              <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;">Github Page:</div>
+              <a href="https://github.com/Trashpixl" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 155px;font-size: 20px;">Contribute Now!</a>
+          </div>
+          </div>
           <script>
             function copyServIp() {
-              navigator.clipboard.writeText("Google.com");
+              navigator.clipboard.writeText("--PutActualIpHere--");
               alert("Ip Copied!");
             }
           document.getElementById("defaultOpen").click();
