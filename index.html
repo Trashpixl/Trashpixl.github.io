@@ -1,97 +1,145 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Trashpixl</title>
-        <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/BQFDyLJN/Logo-Sans-Back.png">
-        
-    </head>
-    <body style="background-color: rgb(41, 40, 40);">
-      <style>
-        .tab button {
-          background-color: inherit;
-          float: center;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          padding: 14px 16px;
-          transition: 0.5s;
-          }
-          .tab button:hover {
-          background-color: rgb(40, 40, 40);
-          }
-          .tab button.active {
-            background-color:rgba(220, 77, 5, 0.85);
-          }
-      </style>
-       <img src="https://i.postimg.cc/cLM3xpgn/logo.png" alt="Logo" style="width:60px;height:60px;vertical-align: sub;border-radius: 15%;">
-       <h style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: white;font-size:60px;vertical-align: super;">Trashpixl</h>
-        <div class="tab" style="overflow: hidden;border: 0px solid #000000;background-color: rgb(40, 40, 40);position: fixed ;top: 20px;left: 350px;">
-            <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: large;">Home</button>
-            <button class="tablinks" onclick="openTab(event, 'Modpack')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: large;">Modpack</button>
-            <button class="tablinks" onclick="openTab(event, 'Discord')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Discord</button>
-            <button class="tablinks" onclick="openTab(event, 'Donate')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Donate</button>
-            <button class="tablinks" onclick="openTab(event, 'Contrib')" style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Contribute</button>
-          </div>
-          <div id="Home" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
-            <div class="container" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
-                <img src="https://i.postimg.cc/zfzgVxKP/Website-Background.jpg" alt="backgroundHome" style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 500px; border-radius: 100px;">
-                <div class="centered" style="position: fixed ;top: 175px;left: 50px;font-size: 40px;">Start your journey on<br>Trashpixl!</div>
-                <div class="centered_small" style="position: fixed ;top: 275px;left: 50px;font-size: 20px;">Trashpixl is the first open source anarchy and<br>minigame minecraft's server.</div>
-                <button onclick="copyServIp()" type="button"style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 350px;left: 165px;font-size: 20px;">Connect Now</button> 
-            </div>
-          </div>
-          <div id="Modpack" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
-            <div class="container2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);"> 
-                <img src="https://i.postimg.cc/J4fpn9td/shader.png" alt="backgroundModpack"  style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
-                <div class="centered3" style="position: fixed ;top: 175px;left: 20px;font-size: 35px;">Here is our official modpack</div>
-                <div class="centered3_small" style="position: fixed ;top: 220px;left: 80px;font-size: 20px;">We recommend powerful hardware <br>to get the best experience.</div>
-                <a href="https://google.com" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 140px;font-size: 20px;">Download Now</a> 
-            </div>
-          </div>
-          <div id="Discord" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
-            <div class="container" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);"> 
-              <img src="https://i.postimg.cc/J4fpn9td/shader.png" alt="backgroundDiscord" style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
-              <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px;">Here is our magnificent<br> Discord server.<br></div>
-              <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;">Click the button to join our community</div>
-              <a href="https://discord.gg/5t9AWXFY5Y" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 155px;font-size: 20px;">Join Now</a> 
-          </div>
-          </div>
-          <div id="Donate" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
-            <div class="container" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);"> 
-              <img src="https://i.postimg.cc/LXrKLz40/bmc-logo.png" alt="backgroundDonate" style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
-              <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px;"><br>Here you can donate to help us <br>with the development of the server.</div>
-              <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;">Click the button to go to the donation page</div>
-              <a href="https://google.com" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 155px;font-size: 20px;">Donate Now!</a>
-          </div>
-          </div>
-          <div id="Contrib" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
-            <div class="container" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);"> 
-              <img src="https://i.postimg.cc/bY5PBWfD/IMG-5878.png" style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
-              <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px; text-align: center;"><br>Since Trashpixl is a fully open source server<br>you to can contribute to the developement of the server!</div>
-              <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;text-align: center;">Github Page:</div>
-              <a href="https://github.com/Trashpixl" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;font-size: 20px;">Contribute Now!</a>
-          </div>
-          </div>
-          <script>
-            function copyServIp() {
-              navigator.clipboard.writeText("--PutActualIpHere--");
-              alert("Ip Copied!");
-            }
-          document.getElementById("defaultOpen").click();
-            function openTab(evt, TabName) {
-              var i, tabcontent, tablinks;
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-              tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(TabName).style.display = "block";
-              evt.currentTarget.className += " active";
-              }
-          </script>
-    </body>
-   
+
+<head>
+  <title>Trashpixl</title>
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/BQFDyLJN/Logo-Sans-Back.png">
+
+</head>
+
+<body style="background-color: rgb(41, 40, 40);">
+  <style>
+    .tab button {
+      background-color: inherit;
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.5s;
+    }
+
+    .tab button:hover {
+      background-color: rgb(40, 40, 40);
+    }
+
+    .tab button.active {
+      background-color: rgba(220, 77, 5, 0.85);
+    }
+  </style>
+  <img src="https://i.postimg.cc/cLM3xpgn/logo.png" alt="Logo"
+    style="width:60px;height:60px;vertical-align: sub;border-radius: 15%;">
+  <h
+    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: white;font-size:60px;vertical-align: super;">
+    Trashpixl</h>
+  <div class="tab"
+    style="overflow: hidden;border: 0px solid #000000;background-color: rgb(40, 40, 40);position: fixed ;top: 20px;left: 350px;">
+    <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: large;">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'Modpack')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: large;">Modpack</button>
+    <button class="tablinks" onclick="openTab(event, 'Discord')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Discord</button>
+    <button class="tablinks" onclick="openTab(event, 'Donate')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Donate</button>
+    <button class="tablinks" onclick="openTab(event, 'Contrib')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Contribute</button>
+  </div>
+  <div id="Home" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/zfzgVxKP/Website-Background.jpg" alt="backgroundHome"
+        style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 500px; border-radius: 100px;">
+      <div class="centered" style="position: fixed ;top: 175px;left: 50px;font-size: 40px;">Start your journey
+        on<br>Trashpixl!</div>
+      <div class="centered_small" style="position: fixed ;top: 275px;left: 50px;font-size: 20px;">Trashpixl is the first
+        open source anarchy and<br>minigame minecraft's server.</div>
+      <button onclick="copyServIp()" type="button"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 350px;left: 165px;font-size: 20px;">Connect
+        Now</button>
+    </div>
+  </div>
+  <div id="Modpack" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container2"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/J4fpn9td/shader.png" alt="backgroundModpack"
+        style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
+      <div class="centered3" style="position: fixed ;top: 175px;left: 20px;font-size: 35px;">Here is our official
+        modpack</div>
+      <div class="centered3_small" style="position: fixed ;top: 220px;left: 80px;font-size: 20px;">We recommend powerful
+        hardware <br>to get the best experience.</div>
+      <a href="https://google.com"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 140px;font-size: 20px;">Download
+        Now</a>
+    </div>
+  </div>
+  <div id="Discord" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/J4fpn9td/shader.png" alt="backgroundDiscord"
+        style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
+      <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px;">Here is our magnificent<br>
+        Discord server.<br></div>
+      <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;">Click the button to
+        join our community</div>
+      <a href="https://discord.gg/5t9AWXFY5Y"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 155px;font-size: 20px;">Join
+        Now</a>
+    </div>
+  </div>
+  <div id="Donate" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/LXrKLz40/bmc-logo.png" alt="backgroundDonate"
+        style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
+      <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px;"><br>Here you can donate to
+        help us <br>with the development of the server.</div>
+      <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;">Click the button to
+        go to the donation page</div>
+      <a href="https://google.com"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;left: 155px;font-size: 20px;">Donate
+        Now!</a>
+    </div>
+  </div>
+  <div id="Contrib" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/bY5PBWfD/IMG-5878.png"
+        style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 200px;">
+      <div class="centered2" style="position: fixed;top: 185px;left: 60px;font-size: 30px; text-align: center;">
+        <br>Since Trashpixl is a fully open source server<br>you to can contribute to the developement of the server!
+      </div>
+      <div class="centered2_small" style="position: fixed ;top: 250px;left: 40px;font-size: 20px;text-align: center;">
+        Github Page:</div>
+      <a href="https://github.com/Trashpixl"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 300px;font-size: 20px;">Contribute
+        Now!</a>
+    </div>
+  </div>
+  <script>
+    function copyServIp() {
+      navigator.clipboard.writeText("--PutActualIpHere--");
+      alert("Ip Copied!");
+    }
+    document.getElementById("defaultOpen").click();
+    function openTab(evt, TabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(TabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+
 </html>
